@@ -1,15 +1,27 @@
 import styled from 'styled-components'
+import SideAdd from './SideAdd'
+
+const HeaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ededec;
+  font-weight: 600;
+  color: #37352f;
+`
 
 const SideHeaderContainer = styled.div`
-  width: 100%;
-  background-color: #c7c7c7;
-  font-size: 1rem;
+  font-size: 13px;
+  padding: 12px 14px;
 `
 
 function SideHeader() {
   return (
     <>
-      <SideHeaderContainer>헤더</SideHeaderContainer>
+      <HeaderWrapper>
+        <SideHeaderContainer>내 메모</SideHeaderContainer>
+        <SideAdd></SideAdd>
+      </HeaderWrapper>
     </>
   )
 }

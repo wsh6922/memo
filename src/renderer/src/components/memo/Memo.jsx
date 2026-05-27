@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import MemoContent from './MemoContent'
+import { memo } from 'react'
 
 const MemoContainer = styled.div`
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding-left: 200px;
+  padding-left: 240px;
   background-color: #8a8a8a;
   box-sizing: border-box;
 
@@ -14,12 +15,12 @@ const MemoContainer = styled.div`
   flex-direction: column;
 `
 
-function Memo({ children }) {
+function Memo({ children, memos, onMemoChange }) {
   return (
     <>
       <MemoContainer>
         {children}
-        <MemoContent></MemoContent>
+        <MemoContent memo={memos} onMemoChange={onMemoChange}></MemoContent>
       </MemoContainer>
     </>
   )
